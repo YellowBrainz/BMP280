@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/smart-t/workspace/quartus/BMP280/BMP280.qsys --block-symbol-file --output-directory=/home/smart-t/workspace/quartus/BMP280/BMP280 --family="Cyclone V" --part=5CSEMA4U23C6
+Progress: Loading BMP280/BMP280.qsys
+Progress: Reading input file
+Progress: Adding i2cslave_to_avlmm_bridge_0 [altera_i2cslave_to_avlmm_bridge 17.1]
+Progress: Parameterizing module i2cslave_to_avlmm_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/smart-t/workspace/quartus/BMP280/BMP280.qsys --synthesis=VERILOG --output-directory=/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis --family="Cyclone V" --part=5CSEMA4U23C6
+Progress: Loading BMP280/BMP280.qsys
+Progress: Reading input file
+Progress: Adding i2cslave_to_avlmm_bridge_0 [altera_i2cslave_to_avlmm_bridge 17.1]
+Progress: Parameterizing module i2cslave_to_avlmm_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: BMP280: Generating BMP280 "BMP280" for QUARTUS_SYNTH
+Info: i2cslave_to_avlmm_bridge_0: "BMP280" instantiated altera_i2cslave_to_avlmm_bridge "i2cslave_to_avlmm_bridge_0"
+Info: BMP280: Done "BMP280" with 2 modules, 11 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

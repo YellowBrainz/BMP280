@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2018.01.20.22:29:41"
+ outputDirectory="/home/smart-t/workspace/quartus/BMP280/BMP280/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CSEMA4U23C6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_AVALON_MASTER_ADDRESS_MAP"
+     type="AddressMap"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_AVALON_MASTER_ADDRESS_WIDTH"
+     type="AddressWidthType"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="avalon_master" kind="avalon" start="1">
+   <property name="adaptsTo" value="" />
+   <property name="addressGroup" value="0" />
+   <property name="addressUnits" value="SYMBOLS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="dBSBigEndian" value="false" />
+   <property name="doStreamReads" value="false" />
+   <property name="doStreamWrites" value="false" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isAsynchronous" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isReadable" value="false" />
+   <property name="isWriteable" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maxAddressWidth" value="32" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="writeWaitTime" value="0" />
+   <port name="address" direction="output" role="address" width="32" />
+   <port name="read" direction="output" role="read" width="1" />
+   <port name="readdata" direction="input" role="readdata" width="32" />
+   <port name="readdatavalid" direction="input" role="readdatavalid" width="1" />
+   <port name="waitrequest" direction="input" role="waitrequest" width="1" />
+   <port name="write" direction="output" role="write" width="1" />
+   <port name="byteenable" direction="output" role="byteenable" width="4" />
+   <port name="writedata" direction="output" role="writedata" width="32" />
+  </interface>
+  <interface name="clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="conduit_end" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="i2c_data_in" direction="input" role="conduit_data_in" width="1" />
+   <port name="i2c_clk_in" direction="input" role="conduit_clk_in" width="1" />
+   <port
+       name="i2c_data_oe"
+       direction="output"
+       role="conduit_data_oe"
+       width="1" />
+   <port name="i2c_clk_oe" direction="output" role="conduit_clk_oe" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="rst_n" direction="input" role="reset_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="BMP280:1.0:AUTO_AVALON_MASTER_ADDRESS_MAP=,AUTO_AVALON_MASTER_ADDRESS_WIDTH=AddressWidth = -1,AUTO_CLOCK_CLOCK_DOMAIN=-1,AUTO_CLOCK_CLOCK_RATE=-1,AUTO_CLOCK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA4U23C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1516483781,AUTO_UNIQUE_ID=(altera_i2cslave_to_avlmm_bridge:17.1:ADDRESS_STEALING=0,BYTE_ADDRESSING=1,I2C_SLAVE_ADDRESS=119,READ_ONLY=0)"
+   instancePathKey="BMP280"
+   kind="BMP280"
+   version="1.0"
+   name="BMP280">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1516483781" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA4U23C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_AVALON_MASTER_ADDRESS_WIDTH" value="AddressWidth = -1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_AVALON_MASTER_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/BMP280.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altera_i2cslave_to_avlmm_bridge.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_avl_mst_intf_gen.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_clk_cnt.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_condt_det.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_databuffer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_rxshifter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_slvfsm.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_spksupp.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_txout.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_txshifter.v"
+       type="VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="/home/smart-t/workspace/quartus/BMP280/BMP280.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/home/smart-t/intelFPGA_lite/17.1/ip/altera/sopc_builder_ip/altera_i2cslave_to_avlmm_bridge/altera_i2cslave_to_avlmm_bridge_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="BMP280">queue size: 0 starting:BMP280 "BMP280"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="BMP280"><![CDATA["<b>BMP280</b>" reuses <b>altera_i2cslave_to_avlmm_bridge</b> "<b>submodules/altera_i2cslave_to_avlmm_bridge</b>"]]></message>
+   <message level="Debug" culprit="BMP280">queue size: 0 starting:altera_i2cslave_to_avlmm_bridge "submodules/altera_i2cslave_to_avlmm_bridge"</message>
+   <message level="Info" culprit="i2cslave_to_avlmm_bridge_0"><![CDATA["<b>BMP280</b>" instantiated <b>altera_i2cslave_to_avlmm_bridge</b> "<b>i2cslave_to_avlmm_bridge_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_i2cslave_to_avlmm_bridge:17.1:ADDRESS_STEALING=0,BYTE_ADDRESSING=1,I2C_SLAVE_ADDRESS=119,READ_ONLY=0"
+   instancePathKey="BMP280:.:i2cslave_to_avlmm_bridge_0"
+   kind="altera_i2cslave_to_avlmm_bridge"
+   version="17.1"
+   name="altera_i2cslave_to_avlmm_bridge">
+  <parameter name="I2C_SLAVE_ADDRESS" value="119" />
+  <parameter name="BYTE_ADDRESSING" value="1" />
+  <parameter name="ADDRESS_STEALING" value="0" />
+  <parameter name="READ_ONLY" value="0" />
+  <generatedFiles>
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altera_i2cslave_to_avlmm_bridge.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_avl_mst_intf_gen.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_clk_cnt.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_condt_det.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_databuffer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_rxshifter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_slvfsm.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_spksupp.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_txout.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/smart-t/workspace/quartus/BMP280/BMP280/synthesis/submodules/altr_i2c_txshifter.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/home/smart-t/intelFPGA_lite/17.1/ip/altera/sopc_builder_ip/altera_i2cslave_to_avlmm_bridge/altera_i2cslave_to_avlmm_bridge_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="BMP280" as="i2cslave_to_avlmm_bridge_0" />
+  <messages>
+   <message level="Debug" culprit="BMP280">queue size: 0 starting:altera_i2cslave_to_avlmm_bridge "submodules/altera_i2cslave_to_avlmm_bridge"</message>
+   <message level="Info" culprit="i2cslave_to_avlmm_bridge_0"><![CDATA["<b>BMP280</b>" instantiated <b>altera_i2cslave_to_avlmm_bridge</b> "<b>i2cslave_to_avlmm_bridge_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

@@ -1,0 +1,161 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 320 232)
+	(text "BMP280" (rect 136 -1 170 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 216 20 228)(font "Arial" ))
+	(port
+		(pt 320 104)
+		(input)
+		(text "readdata[31..0]" (rect 0 0 57 12)(font "Arial" (font_size 8)))
+		(text "readdata[31..0]" (rect 247 93 337 104)(font "Arial" (font_size 8)))
+		(line (pt 320 104)(pt 224 104)(line_width 3))
+	)
+	(port
+		(pt 320 120)
+		(input)
+		(text "readdatavalid" (rect 0 0 51 12)(font "Arial" (font_size 8)))
+		(text "readdatavalid" (rect 253 109 331 120)(font "Arial" (font_size 8)))
+		(line (pt 320 120)(pt 224 120)(line_width 1))
+	)
+	(port
+		(pt 320 136)
+		(input)
+		(text "waitrequest" (rect 0 0 43 12)(font "Arial" (font_size 8)))
+		(text "waitrequest" (rect 260 125 326 136)(font "Arial" (font_size 8)))
+		(line (pt 320 136)(pt 224 136)(line_width 1))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" (font_size 8)))
+		(text "clk" (rect 4 61 22 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 80 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "i2c_data_in" (rect 0 0 44 12)(font "Arial" (font_size 8)))
+		(text "i2c_data_in" (rect 4 101 70 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 80 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "i2c_clk_in" (rect 0 0 38 12)(font "Arial" (font_size 8)))
+		(text "i2c_clk_in" (rect 4 117 64 128)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 80 128)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(input)
+		(text "rst_n" (rect 0 0 21 12)(font "Arial" (font_size 8)))
+		(text "rst_n" (rect 4 189 34 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 80 200)(line_width 1))
+	)
+	(port
+		(pt 320 72)
+		(output)
+		(text "address[31..0]" (rect 0 0 55 12)(font "Arial" (font_size 8)))
+		(text "address[31..0]" (rect 250 61 334 72)(font "Arial" (font_size 8)))
+		(line (pt 320 72)(pt 224 72)(line_width 3))
+	)
+	(port
+		(pt 320 88)
+		(output)
+		(text "read" (rect 0 0 17 12)(font "Arial" (font_size 8)))
+		(text "read" (rect 296 77 320 88)(font "Arial" (font_size 8)))
+		(line (pt 320 88)(pt 224 88)(line_width 1))
+	)
+	(port
+		(pt 320 152)
+		(output)
+		(text "write" (rect 0 0 17 12)(font "Arial" (font_size 8)))
+		(text "write" (rect 293 141 323 152)(font "Arial" (font_size 8)))
+		(line (pt 320 152)(pt 224 152)(line_width 1))
+	)
+	(port
+		(pt 320 168)
+		(output)
+		(text "byteenable[3..0]" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "byteenable[3..0]" (rect 241 157 337 168)(font "Arial" (font_size 8)))
+		(line (pt 320 168)(pt 224 168)(line_width 3))
+	)
+	(port
+		(pt 320 184)
+		(output)
+		(text "writedata[31..0]" (rect 0 0 57 12)(font "Arial" (font_size 8)))
+		(text "writedata[31..0]" (rect 244 173 340 184)(font "Arial" (font_size 8)))
+		(line (pt 320 184)(pt 224 184)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(output)
+		(text "i2c_data_oe" (rect 0 0 48 12)(font "Arial" (font_size 8)))
+		(text "i2c_data_oe" (rect 4 133 70 144)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 80 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(output)
+		(text "i2c_clk_oe" (rect 0 0 42 12)(font "Arial" (font_size 8)))
+		(text "i2c_clk_oe" (rect 4 149 64 160)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 80 160)(line_width 1))
+	)
+	(drawing
+		(text "avalon_master" (rect 225 43 528 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "address" (rect 187 67 416 144)(font "Arial" (color 0 0 0)))
+		(text "read" (rect 202 83 428 176)(font "Arial" (color 0 0 0)))
+		(text "readdata" (rect 184 99 416 208)(font "Arial" (color 0 0 0)))
+		(text "readdatavalid" (rect 164 115 406 240)(font "Arial" (color 0 0 0)))
+		(text "waitrequest" (rect 173 131 412 272)(font "Arial" (color 0 0 0)))
+		(text "write" (rect 201 147 432 304)(font "Arial" (color 0 0 0)))
+		(text "byteenable" (rect 175 163 410 336)(font "Arial" (color 0 0 0)))
+		(text "writedata" (rect 183 179 420 368)(font "Arial" (color 0 0 0)))
+		(text "clock" (rect 52 43 134 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 85 67 188 144)(font "Arial" (color 0 0 0)))
+		(text "conduit_end" (rect 11 83 88 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "conduit_data_in" (rect 85 107 260 224)(font "Arial" (color 0 0 0)))
+		(text "conduit_clk_in" (rect 85 123 254 256)(font "Arial" (color 0 0 0)))
+		(text "conduit_data_oe" (rect 85 139 260 288)(font "Arial" (color 0 0 0)))
+		(text "conduit_clk_oe" (rect 85 155 254 320)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 51 171 132 355)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 85 195 212 400)(font "Arial" (color 0 0 0)))
+		(text " BMP280 " (rect 282 216 612 442)(font "Arial" ))
+		(line (pt 80 32)(pt 224 32)(line_width 1))
+		(line (pt 224 32)(pt 224 216)(line_width 1))
+		(line (pt 80 216)(pt 224 216)(line_width 1))
+		(line (pt 80 32)(pt 80 216)(line_width 1))
+		(line (pt 223 52)(pt 223 188)(line_width 1))
+		(line (pt 222 52)(pt 222 188)(line_width 1))
+		(line (pt 81 52)(pt 81 76)(line_width 1))
+		(line (pt 82 52)(pt 82 76)(line_width 1))
+		(line (pt 81 92)(pt 81 164)(line_width 1))
+		(line (pt 82 92)(pt 82 164)(line_width 1))
+		(line (pt 81 180)(pt 81 204)(line_width 1))
+		(line (pt 82 180)(pt 82 204)(line_width 1))
+		(line (pt 0 0)(pt 320 0)(line_width 1))
+		(line (pt 320 0)(pt 320 232)(line_width 1))
+		(line (pt 0 232)(pt 320 232)(line_width 1))
+		(line (pt 0 0)(pt 0 232)(line_width 1))
+	)
+)

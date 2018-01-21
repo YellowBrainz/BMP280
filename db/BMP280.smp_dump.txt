@@ -1,0 +1,11 @@
+
+State Machine - |BMP280|state
+Name state.STATE_WACK2 state.STATE_STOP state.STATE_DATA state.STATE_WACK state.STATE_RW state.STATE_ADDRESS state.STATE_START state.STATE_IDLE 
+state.STATE_IDLE 0 0 0 0 0 0 0 0 
+state.STATE_START 0 0 0 0 0 0 1 1 
+state.STATE_ADDRESS 0 0 0 0 0 1 0 1 
+state.STATE_RW 0 0 0 0 1 0 0 1 
+state.STATE_WACK 0 0 0 1 0 0 0 1 
+state.STATE_DATA 0 0 1 0 0 0 0 1 
+state.STATE_STOP 0 1 0 0 0 0 0 1 
+state.STATE_WACK2 1 0 0 0 0 0 0 1 
